@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b05f4c9c1f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        *{box-sizing:border-box;}
+
+        body{
+            margin:0;
+            padding:0;
+            font-family: "Amatic SC", sans-serif;
+            font-family: Verdana,sans-serif;
+        }
+        .backgroundimg{
+            background-image: url(../pizza\ margareta.jpg);
+            min-height:700px;
+            background-size:cover;
+            background-position: center;
+            position:relative;
+        }
+        .backgroundimg .centertxt{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            text-align:center;
+            line-height:30px;
+            color:white;
+        }
+        .backgroundimg .centertxt p{
+            background-color:black;
+            padding:2px;
+        }
+        .backgroundimg .centertxt p a{
+            color:white;
+            text-decoration:none;
+        }
+        .centertxt span{
+            font-size:250%;
+        }
+        .centertxt p:hover{
+            color:black;
+            background-color:#607d8b;
+        }
+        .backgroundimg .bottomtxt{
+            position:absolute;
+            bottom:10px;
+            left:10px;
+            color:white;
+        }
+        .backgroundimg .bottomtxt p{
+            background-color:black;
+            padding:3px;
+        }
+        .topnav{
+            margin:0;
+            list-style: none;
+            padding:0;
+            background-color:black;
+            overflow:hidden;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            z-index:1;
+            opacity:0.6;
+        }
+        .topnav:hover{
+            opacity:1;
+        }
+        .topnav li{
+            text-decoration:none;
+            padding:10px;
+            float:left;
+            width:100px;
+            text-align: center;
+        }
+        .topnav li{
+            text-decoration:none;
+            color:white;
+        }
+        .topnav li:hover{
+            background-color:#f1f1f1;
+            color:black;
+        }
+        .main{
+            background-color:black;
+            padding:25px;
+        }
+        .maininfo{
+            max-width:960px;
+            margin:auto;
+            color:white;
+        }
+        .menulist{
+            border:1px solid white;
+        }
+        .flexlist{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            text-align: center;
+        }
+        .flexlist .listfood{
+            flex:33.33%;
+        }
+        #activelist{
+            background-color: crimson;;
+        }
+        #activelist:hover{
+            cursor:pointer;
+        }
+        .listfood:hover{
+            background-color:crimson;
+        }
+        .menuorder{
+            background-color:white;
+            color:black;
+            padding:10px;
+        }
+        .menuorder .flexpizza{
+            display:flex;
+            justify-content: space-between;
+        }
+        .price{
+            background-color: grey;
+            color:white;
+            padding:6px;
+            border-radius:6px;
+        }
+        .foodnm{
+            font-weight:bolder;
+        }
+        .chart h4{
+            font-weight: lighter;
+            color:rgb(34, 34, 34);
+        }
+        .foodnm #span1{
+            color:white;
+            background-color:crimson;
+            padding:3px;
+            border-radius:6px;
+        }
+        .foodnm #span2{
+            background-color:#aaa;
+            color:black;
+            padding:3px;
+            border-radius:6px;
+        }
+        .main2{
+            color: #fff!important;
+            background-color: #f44336!important;
+            padding:25px;
+        }
+        .maininfo2{
+            max-width:960px;
+            margin:auto;
+        }
+        .flexchef{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .flexhours{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content:flex-start;
+        }
+        .flexhours .sideflex{
+            flex:50%;
+        }
+        .main3{
+            color:white;
+            background-color: #607d8b!important;
+            padding:25px;
+        }
+        .maininfo3{
+            max-width:960px;
+            margin:auto;
+        }
+        input{
+            width:100%;
+            margin-bottom:7px;
+            padding:10px;
+            border:none;
+            color:#aaa;
+        }
+        input[type=submit]:hover{
+            background-color:#607d8b;
+            color:white;
+        }
+        #span3{
+            color:white;
+            background-color:black;
+            padding:3px;
+        }
+        .footer{
+            background-color:black;
+            padding:20px;
+        }
+        .footer p{
+            text-align:center;
+            color:white;
+        }
+        .footer p a{
+            color:white;
+            text-decoration:none;
+            transition:0.7s ease;
+        }
+        .footer p a:hover{
+            color:Crimson;
+        }
+        @media only screen and (max-width:600px){
+            .topnav{
+                display:none;
+            }
+        }
+    </style>
+
+    <div class="topnav">
+            <li>HOME</li>
+            <li>MENU</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+    </div>
+
+ <div class="backgroundimg">
+    <div class="centertxt">
+        <span>THIN <br>CRUST PIZZA</span>
+        <p><a href="#">LET ME SEE THE MENU</a></p>
+    </div>
+    <div class="bottomtxt">
+        <p>Open from 10am to 12pm</p>
+    </div>
+ </div>
+
+ <div class="main">
+    <div class="maininfo">
+        <h3 style="color:white;text-align: center;">THE MENU</h3>
+        <div class="menulist">
+        <div class="flexlist">
+            <div id="activelist"  class="listfood">
+                <p>PIZZA</p>
+            </div>
+            <div class="listfood">
+                <p>SALADS</p>
+            </div>
+            <div class="listfood">
+                <p>STARTER</p>
+            </div>
+        </div>
+        <div class="menuorder">
+            <div class="chart">
+            <div class="flexpizza">
+                <p class="foodnm">MARGHERITA</p>
+                <p class="price">$12.50</p>
+            </div><br>
+            <h4>Fresh tomatoes, fresh mozzarella, fresh basil</h4>
+            </div><hr>
+            <div class="chart">
+                <div class="flexpizza">
+                    <p class="foodnm">Formaggio</p>
+                    <p class="price">$15.50</p>
+                </div><br>
+                <h4>Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</h4>
+            </div><hr>
+            <div class="chart">
+                <div class="flexpizza">
+                    <p class="foodnm">Chicken</p>
+                    <p class="price">$17.00</p>
+                </div><br>
+                <h4>Fresh tomatoes, mozzarella, chicken, onions</h4>
+            </div><hr>
+            <div class="chart">
+                <div class="flexpizza">
+                    <p class="foodnm">Pineapple'o'clock</p>
+                    <p class="price">$16.50</p>
+                </div><br>
+                <h4>Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</h4>
+            </div><hr>
+            <div class="chart">
+                <div class="flexpizza">
+                    <p class="foodnm">Meat Town <span id="span1">HOT!</span></p>
+                    <p class="price">$20.00</p>
+                </div><br>
+                <h4>Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</h4>
+            </div><hr>
+            <div class="chart">
+                <div class="flexpizza">
+                    <p class="foodnm">Parma <span id="span2">New</span></p>
+                    <p class="price">$21.50</p>
+                </div><br>
+                <h4>Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</h4>
+            </div>
+        </div>
+        </div>
+    </div>
+ </div>
+ <div class="main2">
+    <div class="maininfo2">
+        <h3 style="text-align:center;">About</h3><br>
+        <p>The Pizza Restaurant was founded in blabla by Mr. Italiano in lorem 
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+             minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.</p><br>
+              <div class="flexchef">
+                <div class="left">
+                    <p><b>The Chef?</b> Mr. Italiano himself</p>
+                    <p>We are proud of our interiors.</p>
+                </div>
+                <div class="right">
+                    <img style="width:150px;height:auto;border-radius:50%;" src="https://www.w3schools.com/w3images/chef.jpg" alt="Chef">
+                </div>
+              </div><br>
+              <img style="width:100%;height:auto;" src="https://www.w3schools.com/w3images/onepage_restaurant.jpg" alt="Pizzeria">
+              <h3>OPENING HOURS</h3>
+              <div class="flexhours">
+                <div class="sideflex">
+                    <p>Mon & Tue CLOSED</p>
+                    <p>Wednesday 10.00 - 24.00</p>
+                    <p>Thursday 10:00 - 24:00</p>
+                </div>
+                <div class="sideflex">
+                    <p>Friday 10:00 - 12:00</p>
+                    <p>Saturday 10:00 - 23:00</p>
+                    <p>Sunday Closed</p>
+                </div>
+              </div>
+    </div>
+ </div>
+ <img style="width:100%;height:100%;" src="https://www.w3schools.com/w3images/map.jpg" alt="City">
+
+<div class="main3">
+    <div class="maininfo3">
+        <h3 style="text-align:center;">CONTACT</h3>
+        <p>Find us at some address at some place or call us at 05050515-122330</p>
+        <p><span id="span3">FTY!</span> We offer full-service catering for any event, large or 
+            small. We understand your needs and we will cater the food to satisfy the
+             biggerst criteria of them all, both look and taste.</p><br>
+             <p><b> Reserve</b> a table, ask for today's special or just send us a message:</p>
+             <form action="#">
+                <input type="text" placeholder="NAME">
+                <input type="text" placeholder="HOW MANY PEOPLE">
+                <input type="date">
+                <input type="text" placeholder="MESSAGE \ SPECIAL REQUIREMENTS">
+                <input type="submit" value="SEND MESSAGE">
+             </form>
+    </div>
+</div>
+<div class="footer">
+    <p>Created by <a href="#">Saba Fesvianidze</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--
+<button onclick="replace()">Concat</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+<p id="demo21"></p>
+<p id="demo22"></p>
+<p id="demo23"></p>
+<p id="demo24"></p>
+<p id="demo25"></p>
+<p id="demo26"></p>
+<p id="demo27"></p>
+<p id="demo28"></p>
+<p id="demo29"></p>
+<p id="demo30"></p>
+<p id="demo31"></p>
+<p id="demo32"></p>
+<p id="demo33"></p>
+<p id="demo34"></p>
+<p id="demo35"></p>
+<p id="demo36"></p>
+<p id="demo37"></p>
+<p id="demo38"></p>
+<p id="demo39"></p>
+<p id="demo40"></p>
+<p id="demo41"></p>
+
+<button onclick="func1()">Sort Alphabetic</button>
+<button onclick="func2()">Sort Numerically</button>
+<button onclick="func3()">Sort random</button>
+<button onclick="func4()">Sort yates method</button><br><br><br>
+
+<button onclick="sorts()">Sort</button>    
+
+   -->
+
+    <script src="index.js"></script>
+</body>
+</html>
